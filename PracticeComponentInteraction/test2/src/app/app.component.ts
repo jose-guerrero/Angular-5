@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  message: string;
+
+  receiveMessage($event) {
+    this.message = $event
+  }
+  
 }
