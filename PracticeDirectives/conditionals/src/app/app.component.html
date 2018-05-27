@@ -19,5 +19,20 @@ Keep HTML: <input type="checkbox" ng-model="myVar" (click)="show=!show">
 <button (click)="showing= !showing">{{showing ? 'hide' : 'show'}}</button>
 showing = {{showing}}
 <br>
-  <div *ngIf="showing">this is ignored</div>
-  
+<div *ngIf="showing">this is ignored</div>
+
+<br>
+<h2 [ngStyle]="myStyle">This is an h2 text</h2>
+
+<br>
+<button (click)="switchOff()">Switch On/Off</button>
+<h3 *ngIf="showText">This is h3 text with ngIf directive</h3>
+
+<br>
+<div [ngSwitch]="TextColor" (click)="ChangeTextColor()">
+  <h2 *ngSwitchCase = "'BLUE'" style="color: blue">This is a blue text</h2>
+  <h2 *ngSwitchCase = "'RED'" style="color: red">This is a red text</h2>
+  <h2 *ngSwitchCase = "'GREEN'" style="color: green">This is a green text</h2>
+  <li *ngSwitchDefault>Bye Bye</li>
+</div>
+
